@@ -21,3 +21,19 @@ Steps
 9. Now do "dvc commit" and "dvc push" so that it will move the csv file to s3 folder
 10. Do a git add-commit-push to mark this stage as first version of data
 
+11. Now make changes to mycode.py to append a new row in data, check changes via "dvc status"
+It will show:
+data.dvc:                                                                                                                                  
+        changed outs:
+                modified:           data
+
+12. Now do "dvc commit"
+It will ask: outputs ['data'] of stage: 'data.dvc' changed. Are you sure you want to commit it? [y/n] y 
+
+13. Do "dvc push"
+It will create two new files is "s3" folder with new md5 id and the file with update csv data
+
+//git won't be tracking "s3" folder for new changes, it will track data.dvc where you find new md5 id
+
+
+
