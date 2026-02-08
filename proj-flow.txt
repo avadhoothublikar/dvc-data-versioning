@@ -39,4 +39,22 @@ It will create two new files is "s3" folder with new md5 id and the file with up
 14. now repeat the steps 11-13 for the v3 data
 
 
+15. Now rolling back the v1 from v3
+
+do git log --oneline
+
+you will find privious commits along with its sha id. copy the sha id of of first version (v1)
+
+16. git checkout <hash_id>  // will revert the code changes in mycode.py (both GF1 and GF2 will be commented)
+
+17. dvs status  // it will say modified
+18. dvc pull
+19. dvc status // says Data and pipelines are up to date.
+
+20. If we want to revert again to v3 changes. do git checkout main
+21. dvc status says modified
+22. dvc pull
+
+
+
 
