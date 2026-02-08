@@ -5,3 +5,15 @@ Steps
 3. Do a git add-commit-push before initializing dvc.
 
 
+4. pip install dvc
+5. Now dvc init (creates .dvcignore, .dvc)
+
+6. Now create a folder names "s3"
+7. Add remote orgin to DVC ("dvc remote add -d myremote s3") // "s3" is the folder names
+
+6. Telling dvc to perform versioning of all the files inside folder data "dvc add data/" 
+7. git tells us to stop traching data folder 
+    git rm -r --cached 'data'
+    git commit -m "stop tracking data"
+8. Now if we run dvc add data/ it will run and creates (data.dvc)
+    Also dvc asks to run "git add .gitignore data.dvc" because dvc added few changes to it (md5 and id changes)
