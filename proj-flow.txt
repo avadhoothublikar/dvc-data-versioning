@@ -36,4 +36,7 @@ It will create two new files is "s3" folder with new md5 id and the file with up
 //git won't be tracking "s3" folder for new changes, it will track data.dvc where you find new md5 id
 
 
+14. now repeat the steps 11-13 for the v3 data
+
+
 
